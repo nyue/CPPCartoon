@@ -18,5 +18,5 @@ add_executable (cppCartoon
 
 if(OpenMP_CXX_FOUND)
   target_link_libraries(cppCartoon PUBLIC OpenMP::OpenMP_CXX)
-  add_definition(-DUSEOMP=1)
+  add_definitions(-DUSEOMP=1)
 endif()
