@@ -5,8 +5,6 @@
 #include "cpdb/cpdb.h"
 #include "cartoon.h"
 
-#define USEOMP 1
-
 #if USEOMP
 #include <omp.h>
 #endif

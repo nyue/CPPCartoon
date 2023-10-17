@@ -423,8 +423,8 @@ void createSegmentMesh(Mesh &mesh, int curi, int n,
         delete(splines1[i]);
         delete(splines2[i]);
     }
-    delete(splines1);
-    delete(splines2);
+    delete [] splines1;
+    delete [] splines2;
 }
 
 bool diffPP(int id1, int id2) {
@@ -539,7 +539,7 @@ Mesh createChainMesh(const chain &C) {
 
         createSegmentMesh(mesh, i, n, pp1, pp2, pp3, pp4);
     }
-    delete(planes);
+    delete [] planes;
     return mesh;
 }
 
@@ -637,7 +637,7 @@ Mesh createChainMesh(int chainId, const int *nbResPerChain,
 
         createSegmentMesh(mesh, i, n, pp1, pp2, pp3, pp4);
     }
-    delete(planes);
+    delete [] planes;
     return mesh;
 
 }
